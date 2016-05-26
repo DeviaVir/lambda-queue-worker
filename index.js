@@ -29,7 +29,7 @@ var pr = {};
    */
   pr.download = function download(s3Path) {
   	var imageName = path.basename(s3Path).slice(0, (path.basename(s3Path).length-4));
-    var savedPath = __dirname + '/images/';
+    var savedPath = '/tmp/';
 
     console.log('path', s3Path);
     console.log('bucket', bucket);
