@@ -1,19 +1,26 @@
 {
-  "name": "lambda-queue-worker",
+  "name": "lambda-watermarker",
   "version": "1.0.0",
-  "description": "Lambda enabled queue worker.",
+  "description": "Watermark images as they come in to an SQS queue.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pebble/lambda-queue-worker.git"
+    "url": "git+https://github.com/DeviaVir/lambda-watermarker.git"
   },
-  "author": "Pebble",
+  "author": "Chase Sillevis",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pebble/lambda-queue-worker/issues"
+    "url": "https://github.com/DeviaVir/lambda-watermarker/issues"
   },
-  "homepage": "https://github.com/pebble/lambda-queue-worker#readme"
+  "homepage": "https://github.com/DeviaVir/lambda-watermarker#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1.36",
+    "bluebird": "^2.9.32",
+    "gm": "^1.18.1",
+    "rimraf": "^2.4.1",
+    "s3": "^4.4.0"
+  }
 }
