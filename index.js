@@ -70,13 +70,14 @@ var pr = {};
    * @return {String} wdPath
    */
   pr.watermark = function watermark(attrs) {
+  	var watermarkPath = __dirname + '/images/';
     return Promise.resolve().then(function() {
       var god = Promise.pending();
 
       console.log('[pr.watermark] Create share watermark');
 
       gm(attrs[0] + 'source.jpg')
-        .composite(attrs[0] + 'watermark-black.png')
+        .composite(watermarkPath + 'watermark-black.png')
         .geometry('+50+50')
          .write(attrs[0] + attrs[1] + '.jpg', function(err) {
             if (err) {
@@ -97,7 +98,7 @@ var pr = {};
       console.log('[pr.watermark] Create share watermark');
 
       gm(attrs[0] + attrs[1] + '.jpg')
-        .composite(attrs[0] + 'watermark-white.png')
+        .composite(watermarkPath + 'watermark-white.png')
         .geometry('+1700+1000')
          .write(attrs[0] + attrs[1] + '.jpg', function(err) {
             if (err) {
