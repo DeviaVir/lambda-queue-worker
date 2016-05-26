@@ -10,10 +10,10 @@ RUN npm install -g node-lambda
 
 # Setup user
 RUN useradd -g daemon -m -d /app app
+WORKDIR /app
+ADD . /app
 RUN chown -R app /app
 USER app
-ADD . /app
-WORKDIR /app
 ENV HOME /app
 
 CMD node-lambda deploy
